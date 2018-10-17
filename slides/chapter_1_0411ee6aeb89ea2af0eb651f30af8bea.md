@@ -167,7 +167,7 @@ key: "07447639db"
 
 
 `@script`
-So what if you want to work with multiple sheets from your Excel workbook? For instance, here we have roles and departments of different DataCamp employees located on different tabs of our workbook.
+So what if you want to work with multiple sheets from your Excel workbook? For instance, here we have the roles and departments of different DataCamp employees located in separate tabs within our workbook.
 
 
 ---
@@ -225,7 +225,9 @@ df = pd.read_excel('file.xlsx')
 
 
 `@script`
-To reiterate, pd.ExcelFile() reads the entire Excel workbook into Python, while pd.read_excel() only reads in the first tab of an Excel workbook. Additionally, while pd.read_excel() creates a dataframe, pd.ExcelFile() does not. Because dataframes are our desired format for working with data in Python, we'll have to work with the output of pd.ExcelFile() a bit more.
+To reiterate, pd.ExcelFile() reads the entire Excel workbook into Python, while pd.read_excel() only reads in the first tab of an Excel workbook. Additionally, while pd.read_excel() creates a dataframe, pd.ExcelFile() does not. 
+
+Because dataframes are our desired format for working with data in Python, we'll have to work with the output of pd.ExcelFile() a bit more.
 
 
 ---
@@ -247,6 +249,8 @@ workbook.sheet_names
 
 
 `@script`
+To do this, we'll leverage some handy attributes and methods provided by ExcelFile objects.
+
 Firstly, our workbook variable has a very useful attribute, called 'sheet_names', which - intuitively - tells us the names of each sheet in our workbook. With this knowledge, we can move on to turning each sheet into a dataframe.
 
 
@@ -273,7 +277,7 @@ df_depts = workbook.parse('Departments')
 
 
 `@script`
-Finally, we can use the .parse() method of our workbook to turn each sheet into a dataframe.
+We'll use the .parse() method of our workbook to convert each sheet into a dataframe. We provide a sheet name in quotations to the .parse() method, and - as always - store the results in a variable. Here, we provide the sheet name 'Roles' to the .parse() method, and store the resulting dataframe into a varibale called df_roles. Notice how we do something similar for the 'Departments' tab.
 
 
 ---
@@ -285,5 +289,5 @@ key: "962cce4835"
 ```
 
 `@script`
-
+Now it's your turn to create some dataframes out of Excel workbooks. Good luck!
 
