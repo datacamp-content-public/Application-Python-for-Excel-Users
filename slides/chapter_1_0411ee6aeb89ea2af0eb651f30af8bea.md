@@ -155,7 +155,43 @@ df.shape
 
 
 ---
-## Final Slide
+## Two Sheet Picture
+
+```yaml
+type: "FullImageSlide"
+key: "07447639db"
+```
+
+`@part1`
+![](http://assets.datacamp.com/production/repositories/3817/datasets/70807d1e8ac6a072a8b02f7a6382cc4a0f66efca/Two%20Tabs.png)
+
+
+`@script`
+But what if you want to access multiple sheets from your workbook? For instance, here we have roles and departments of different DataCamp employees on different tabs.
+
+
+---
+## pd.ExcelFile()
+
+```yaml
+type: "FullCodeSlide"
+key: "a55c97e56a"
+```
+
+`@part1`
+```
+import pandas as pd
+
+workbook = pd.ExcelFile('file.xlsx')
+```
+
+
+`@script`
+Fortunately, pandas has us covered.
+
+
+---
+## Fin
 
 ```yaml
 type: "FinalSlide"
