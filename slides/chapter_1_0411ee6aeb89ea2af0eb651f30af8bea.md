@@ -266,14 +266,14 @@ workbook = pd.ExcelFile('file.xlsx')
 
 workbook.sheet_names
 
-df_one = workbook.parse('Roles')
-df_two = workbook.parse('Departments')
+df_roles = workbook.parse('Roles')
+df_depts = workbook.parse('Departments')
 
 ```
 
 
 `@script`
-
+Finally, we can use the .parse() method of our workbook to turn each sheet into a dataframe.
 
 
 ---
