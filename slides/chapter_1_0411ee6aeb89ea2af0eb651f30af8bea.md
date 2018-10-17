@@ -209,8 +209,8 @@ workbook = pd.ExcelFile('file.xlsx')
 ```
 
 - Reads entire workbook into memory
-- Creates **workbook** object
-- Has NOT created any dataframes
+- Creates **workbook object**
+- Has **NOT** created any dataframes
 
 
 `@part2`
@@ -225,7 +225,7 @@ df = pd.read_excel('file.xlsx')
 
 
 `@script`
-To reiterate, pd.ExcelFile() reads the entire Excel workbook into Python, while pd.read_excel() only reads in the first tab of an Excel workbook. Additionally, while pd.read_excel() converts a single tab into a dataframe, pd.ExcelFile() does not.
+To reiterate, pd.ExcelFile() reads the entire Excel workbook into Python, while pd.read_excel() only reads in the first tab of an Excel workbook. Additionally, while pd.read_excel() creates a dataframe, pd.ExcelFile() does not. Because dataframes are our desired format for working with data in Python, we'll have to work with the output of pd.ExcelFile() a bit more.
 
 
 ---
