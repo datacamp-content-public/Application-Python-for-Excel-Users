@@ -43,7 +43,7 @@ import pandas as pd
 
 
 `@script`
-In Chapter 1, you'll recall we imported the pandas package, which afforded us the functionality to read in and interact with our Excel workbook in Python.
+In Chapter 1, you'll recall we imported the pandas package, which afforded us the functionality to read in and interact with our Excel data in Python.
 
 
 ---
@@ -167,7 +167,7 @@ key: "07447639db"
 
 
 `@script`
-But what if you want to access multiple sheets from your workbook? For instance, here we have roles and departments of different DataCamp employees on different tabs.
+So what if you want to work with multiple sheets from your Excel workbook? For instance, here we have roles and departments of different DataCamp employees located on different tabs of our workbook.
 
 
 ---
@@ -187,7 +187,68 @@ workbook = pd.ExcelFile('file.xlsx')
 
 
 `@script`
-Fortunately, pandas has us covered.
+Fortunately, pandas has us covered. The pd.ExcelFile() function reads the entire workbook into Python as an ExcelFile object. Here, we are storing the object in a variable called 'workbook'. 
+
+You can think of the 'workbook' variable as a representation of the entire Excel workbook in Python. This gives us the freedom to now turn each tab of the Excel workbook into separate DataFrames. So far, we haven't done this yet
+
+
+---
+## pd.ExcelFile() vs. pd.read_excel()
+
+```yaml
+type: "TwoColumns"
+key: "9379711499"
+center_content: false
+```
+
+`@part1`
+## Workbook Object
+
+```
+import pandas as pd
+
+# reads entire workbook into memory
+# has NOT created any dataframes
+workbook = pd.ExcelFile('file.xlsx')
+```
+
+
+`@part2`
+## Single DataFrame
+
+```
+import pandas as pd
+
+# reads first tab of workbook
+# turns tab into a dataframe
+df = pd.read_excel('file.xlsx')
+```
+
+
+`@script`
+To compare,
+
+
+---
+## Sheet Names
+
+```yaml
+type: "FullCodeSlide"
+key: "a7c90acb49"
+```
+
+`@part1`
+```
+import pandas as pd
+
+workbook = pd.ExcelFile('file.xlsx')
+
+workbook.sheet_names
+```
+
+
+`@script`
+Our workbook variable has some useful intuitive features
 
 
 ---
