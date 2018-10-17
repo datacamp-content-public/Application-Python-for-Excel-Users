@@ -67,7 +67,7 @@ df = pd.read_excel('file.xlsx')
 `@part2`
 1. Imported pandas package
 
-2. Read the first sheet of _file.xlsx_, stored as a dataframe
+2. Read the first tab of _file.xlsx_, stored as a dataframe
 
 
 `@script`
@@ -102,7 +102,7 @@ df.head()
 `@part2`
 1. Imported pandas package
 
-2. Read the first sheet of _file.xlsx_, stored as a dataframe
+2. Read the first tab of _file.xlsx_, stored as a dataframe
 
 3. Used a method to look at first 5 rows
 
@@ -143,7 +143,7 @@ df.shape
 `@part2`
 1. Imported pandas package
 
-2. Read the first sheet of _file.xlsx_, stored as a dataframe
+2. Read the first tab of _file.xlsx_, stored as a dataframe
 
 3. Used a method to look at first 5 rows
 
@@ -247,7 +247,7 @@ workbook.sheet_names
 
 
 `@script`
-Our workbook variable has a very useful attribute, called 'sheet_names', which - intuitively - tells us the names of each sheet in our workbook.
+Firstly, our workbook variable has a very useful attribute, called 'sheet_names', which - intuitively - tells us the names of each sheet in our workbook. With this knowledge, we can move on to turning each sheet into a dataframe.
 
 
 ---
@@ -266,6 +266,8 @@ workbook = pd.ExcelFile('file.xlsx')
 
 workbook.sheet_names
 
+df_one = workbook.parse('Roles')
+df_two = workbook.parse('Departments')
 
 ```
 
