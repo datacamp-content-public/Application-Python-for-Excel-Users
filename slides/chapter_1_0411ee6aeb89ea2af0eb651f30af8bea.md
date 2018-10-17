@@ -247,7 +247,31 @@ workbook.sheet_names
 
 
 `@script`
-Our workbook variable has some useful intuitive features
+Our workbook variable has a very useful attribute, called 'sheet_names', which - intuitively - tells us the names of each sheet in our workbook.
+
+
+---
+## Parse
+
+```yaml
+type: "FullCodeSlide"
+key: "ab8fe5972f"
+```
+
+`@part1`
+```
+import pandas as pd
+
+workbook = pd.ExcelFile('file.xlsx')
+
+workbook.sheet_names
+
+
+```
+
+
+`@script`
+
 
 
 ---
