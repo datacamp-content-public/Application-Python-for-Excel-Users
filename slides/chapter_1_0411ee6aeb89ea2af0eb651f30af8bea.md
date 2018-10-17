@@ -189,7 +189,7 @@ workbook = pd.ExcelFile('file.xlsx')
 `@script`
 Fortunately, pandas has us covered. The pd.ExcelFile() function reads the entire workbook into Python as an ExcelFile object. Here, we are storing the object in a variable called 'workbook'. 
 
-You can think of the 'workbook' variable as a representation of the entire Excel workbook in Python. This gives us the freedom to now turn each tab of the Excel workbook into separate DataFrames. So far, we haven't done this yet
+You can think of the 'workbook' variable as a representation of the entire Excel workbook in Python. This gives us the freedom to now turn each tab of the Excel workbook into separate DataFrames. Note, we have not done this yet.
 
 
 ---
@@ -205,28 +205,27 @@ center_content: false
 ## Workbook Object
 
 ```
-import pandas as pd
-
-# reads entire workbook into memory
-# has NOT created any dataframes
 workbook = pd.ExcelFile('file.xlsx')
 ```
+
+- Reads entire workbook into memory
+- Creates **workbook** object
+- Has NOT created any dataframes
 
 
 `@part2`
 ## Single DataFrame
 
 ```
-import pandas as pd
-
-# reads first tab of workbook
-# turns tab into a dataframe
 df = pd.read_excel('file.xlsx')
 ```
 
+- Reads first tab of workbook
+- Turns tab into a **dataframe**
+
 
 `@script`
-To compare,
+To reiterate, pd.ExcelFile() reads the entire Excel workbook into Python, while pd.read_excel() only reads in the first tab of an Excel workbook. Additionally, while pd.read_excel() converts a single tab into a dataframe, pd.ExcelFile() does not.
 
 
 ---
